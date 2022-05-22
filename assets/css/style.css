@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/*-Login Page-*/
+.wrapper{
+    background: rgb(226, 224, 224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;   
+}
+.title{
+   font-family:'Pacifico', cursive;
+   color: rgb(43, 43, 207);
+   margin-bottom: 10px;
+}
+.card{
+    width: 500px;
+    height: auto;
+    padding: 25px;
+    box-shadow: 3px 5px 5px;
+}
+.input{
+    margin: 25px;
+}
+.button-display{
+    display: flex;
+    padding: 5px;
+    margin-top: 3px;
+    justify-content: center;
+    align-items: center;
+}
+.button-display button{
+    margin: 5px;
+}
+.register{
+    margin: 15px 0;
+}
+/*-----------------*/
