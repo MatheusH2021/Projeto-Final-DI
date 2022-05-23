@@ -8,7 +8,7 @@ require_once('../template/header.php');
             <div class="title-home">
                 <h2>Adicionar Tarefas:</h2>
             </div>    
-            <form class="form-control" action="../Controllers/add_tarefa.php" method="post">
+            <form class="form-control" action="../Controllers/add_tarefa.php" method="post" autocomplete="off">
                 <div class="input">
                     <label class="ajust-titulo" for="titulo">Titulo:</label>
                     <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Insira o titulo de sua tarefa">
@@ -27,7 +27,7 @@ require_once('../template/header.php');
                 </div>
                 <div class="input">
                     <label class="ajust-data" for="titulo">Data: </label>
-                    <input class="form-control" type="date" name="titulo" placeholder="Insira a data limite de sua tarefa, Não obrigatorio">
+                    <input class="form-control" type="date" name="data" placeholder="Insira a data limite de sua tarefa, Não obrigatorio">
                 </div>
                 <button class="btn btn-primary">Adicionar</button>
             </form>
