@@ -7,7 +7,7 @@ if (isset($_GET['status'])){
 
 switch($status){
     case 1:
-        $msg = "Ususário já cadastrado, insira outro nome de usuário!";
+        $msg = "Por Favor, preencha ambos os campos para realizar cadastro!";
         break;
     case 2:
         $msg = "Ususário já cadastrado, insira outro nome de usuário!";
@@ -38,17 +38,11 @@ switch($status){
                     Get it done!
                 </h1>
             </div>
-            <?php if (isset($msg)){ 
-                    if ($status <= 1){   ?>
-                <div class="alert alert-success" role="alert">
-                    <?php echo $msg; ?>
-                </div>
-            <?php } else { ?> 
+            <?php if (isset($msg)){ ?> 
                 <div class="alert alert-danger" role="alert">
                     <?php echo $msg; ?>
                 </div>
-            <?php  } 
-              } ?>  
+            <?php  } ?> 
             <form class="form-control" action="Controllers/valida_cadastro.php" method="post" autocomplete="off">
                 <div class="sub-title">
                     <h4>

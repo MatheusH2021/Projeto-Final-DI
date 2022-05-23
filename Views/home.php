@@ -3,6 +3,11 @@ require_once('../template/header.php');
 ?>
 
 <div class="wrapper">
+    <?php if(isset($_SESSION['user_id'])){ ?>
+        <div class="alert alert-success" role="alert">
+            Bem-Vindo <?php echo $_SESSION['user_name']; ?>
+        </div>
+    <?php } ?>
     <div class="Charts container text-center">
         <h3 class="title-home">Resumo de Tarefas:</h3>
         <div class="row">
