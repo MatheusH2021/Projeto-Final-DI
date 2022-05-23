@@ -1,38 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/*-Login Page-*/
+body{
+    font-family: Roboto;
+    background: gray;
+    min-height: vh;
+}
+footer{
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/ 
+    height: 40px;
+    background: rgb(61, 61, 240);
+}
 .wrapper{
-    background: rgb(226, 224, 224);
+    margin-top: 20px;
+}
+.navbar{
+    background: rgb(61, 61, 240);
+}
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+    color: white
+}
+.Pages container-fluid{
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;   
+    align-content: space-between;
 }
-.title{
-   font-family:'Pacifico', cursive;
-   color: rgb(43, 43, 207);
-   margin-bottom: 10px;
+.Charts{
+    padding-top: 20px;
 }
-.card{
-    width: 500px;
-    height: auto;
-    padding: 25px;
-    box-shadow: 3px 5px 5px;
+.chart-frame{
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    padding: 10px;
 }
-.input{
-    margin: 25px;
+.title-home{
+    display: inline-block;
+    font-family: Roboto;
+    margin-bottom: 25px;
+    border-bottom: 3px solid rgb(61, 61, 240);
 }
-.button-display{
-    display: flex;
-    padding: 5px;
-    margin-top: 3px;
-    justify-content: center;
-    align-items: center;
+.chat-frame #myChart2{
+    margin-bottom: 15px;
 }
-.button-display button{
-    margin: 5px;
-}
-.register{
-    margin: 15px 0;
-}
-/*-----------------*/

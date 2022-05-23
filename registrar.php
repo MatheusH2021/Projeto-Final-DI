@@ -7,16 +7,10 @@ if (isset($_GET['status'])){
 
 switch($status){
     case 1:
-        $msg = "Login bem sucedido!";
+        $msg = "Ususário já cadastrado, insira outro nome de usuário!";
         break;
     case 2:
-        $msg = "Logout realizado com sucesso!";
-        break;
-    case 3:
-        $msg = "Cadastro realizado com sucesso! Faça login para começar!";
-        break;
-    case 4:
-        $msg = "Usuário ou senha inválida! Por favor, Informe um usuário valido!";
+        $msg = "Ususário já cadastrado, insira outro nome de usuário!";
         break;
 }
 ?>
@@ -45,7 +39,7 @@ switch($status){
                 </h1>
             </div>
             <?php if (isset($msg)){ 
-                    if ($status <= 3){   ?>
+                    if ($status <= 1){   ?>
                 <div class="alert alert-success" role="alert">
                     <?php echo $msg; ?>
                 </div>
@@ -54,11 +48,11 @@ switch($status){
                     <?php echo $msg; ?>
                 </div>
             <?php  } 
-              } ?> 
-            <form class="form-control" action="Controllers/valida_login.php" method="post" autocomplete="off">
+              } ?>  
+            <form class="form-control" action="Controllers/valida_cadastro.php" method="post" autocomplete="off">
                 <div class="sub-title">
                     <h4>
-                        Login
+                    Criar Conta
                     </h4>
                 </div>
                 <div class="input">
@@ -70,11 +64,11 @@ switch($status){
                     <input class="form-control" type="password" name="passwrd" id="passwrd">
                 </div>
                 <div class="button-display text-center">
-                    <button class="btn btn-primary">Entrar</button>
+                    <button class="btn btn-primary">Cadastrar</button>
                 </div>                       
             </form>
             <div class="register">
-                <p>Não possui conta? <a href="registrar.php">Cadastre-se!</a></p>
+                <p>Já possui uma conta? <a href="index.php">Faça Login!</a></p>
             </div>
         </div>
     </div>
