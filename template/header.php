@@ -1,4 +1,13 @@
-<?php session_start() ?>
+<?php 
+
+session_start();
+
+if (!isset($_SESSION['user_id'])){
+    header("location:../index.php?status=5");
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

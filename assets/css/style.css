@@ -15,11 +15,31 @@ footer{
     height: 40px;
     background: rgb(61, 61, 240);
 }
+.input input{
+    width: 500px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input .ajust-titulo{
+    margin-left: 15px;
+    padding-left: 15px;
+}
+.input .ajust-data{
+    margin-left: 20px;
+    padding-left: 15px;
+}
+.input .ajust-categoria{
+    margin-left: 5px;
+    padding-left: 9px;
+}
 .wrapper{
     margin-top: 20px;
 }
 .navbar{
     background: rgb(61, 61, 240);
+    height: 95px;
 }
 .navbar-brand{
     font-family: 'Pacifico', cursive;
@@ -44,6 +64,21 @@ footer{
     margin-bottom: 25px;
     border-bottom: 3px solid rgb(61, 61, 240);
 }
-.chat-frame #myChart2{
-    margin-bottom: 15px;
+.input{
+    margin: 20px;
+    display: flex;
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 650px;
+    height: auto;
+    padding: 20px;
+    box-shadow: 3px 5px 5px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -4,11 +4,11 @@ require_once('../template/header.php');
 
 <div class="wrapper">
     <?php if(isset($_SESSION['user_id'])){ ?>
-        <div class="alert alert-success" role="alert">
-            Bem-Vindo <?php echo $_SESSION['user_name']; ?>
+        <div class="alert alert-success text-center" role="alert">
+            Bem-Vindo <?php echo $_SESSION['user_name']; ?><button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
         </div>
     <?php } ?>
-    <div class="Charts container text-center">
+    <div class="Charts container-fluid text-center">
         <h3 class="title-home">Resumo de Tarefas:</h3>
         <div class="row">
             <div class="col-lg-6">
@@ -45,9 +45,9 @@ require_once('../template/header.php');
     new Chart("myChart2", {
         type: "bar",
         data: {
-            labels: ["Italy", "France", "Spain"],
+            labels: ["Escola", "Trabalho", "Independente"],
             datasets: [{
-                backgroundColor: ["red", "green","blue"],
+                backgroundColor: ["yellow", "red","blue"],
                 data: [10,10,10]
             }]
     },

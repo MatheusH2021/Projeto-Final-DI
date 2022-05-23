@@ -40,7 +40,7 @@ switch($status){
             </div>
             <?php if (isset($msg)){ ?> 
                 <div class="alert alert-danger" role="alert">
-                    <?php echo $msg; ?>
+                    <?php echo $msg; ?><button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
                 </div>
             <?php  } ?> 
             <form class="form-control" action="Controllers/valida_cadastro.php" method="post" autocomplete="off">

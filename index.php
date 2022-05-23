@@ -1,8 +1,15 @@
 <?php
+
+session_start();
+
 if (isset($_GET['status'])){
     $status = $_GET['status'];
 } else {
     $status = '';
+}
+
+if (isset($_SESSION['user_id'])){
+    header("location:Views/home.php");
 }
 
 switch($status){
@@ -17,6 +24,9 @@ switch($status){
         break;
     case 4:
         $msg = "Usuário ou senha inválida! Por favor, Informe um usuário valido!";
+        break;
+    case 5:
+        $msg = "Por Favor, realize login para acessar as paginas da plataforma!";
         break;
 }
 ?>
@@ -46,12 +56,12 @@ switch($status){
             </div>
             <?php if (isset($msg)){ 
                     if ($status <= 3){   ?>
-                <div class="alert alert-success" role="alert">
-                    <?php echo $msg; ?>
+                <div class="alert alert-success show" role="alert" id="message">
+                    <?php echo $msg; ?><button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
                 </div>
             <?php } else { ?> 
-                <div class="alert alert-danger" role="alert">
-                    <?php echo $msg; ?>
+                <div class="alert alert-danger show" role="alert" id="message">
+                    <?php echo $msg; ?><button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
                 </div>
             <?php  } 
               } ?> 

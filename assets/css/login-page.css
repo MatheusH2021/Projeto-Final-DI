@@ -43,4 +43,9 @@ body{
 .register{
     margin: 15px 0;
 }
+.btn-close{
+    color: black;
+    border: 1px solid lightgray;
+    padding: 5px;
+}
 /*-----------------*/
