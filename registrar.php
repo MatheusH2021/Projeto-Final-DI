@@ -7,10 +7,16 @@ if (isset($_GET['status'])){
 
 switch($status){
     case 1:
-        $msg = "Por Favor, preencha ambos os campos para realizar cadastro!";
+        $msg = "Por Favor, preencha todos os campos para realizar cadastro!";
         break;
     case 2:
         $msg = "Ususário já cadastrado, insira outro nome de usuário!";
+        break;
+    case 3:
+        $msg = "As senhas não coincidem, Por favor confirme sua senha!(OBS: Sua senha deve possuir mais que 6 caracteres)";
+        break;
+    case 4:
+        $msg = "Usuario deve possuir mais que 3 e menos que 10 caracteres, por favor digite um usuário maior";
         break;
 }
 ?>
@@ -50,12 +56,16 @@ switch($status){
                     </h4>
                 </div>
                 <div class="input">
-                    <label  for="user">Nome: <label>
-                    <input class="form-control" type="text" name="user" id="user">
+                    <!-- <label  for="user">Nome: <label> -->
+                    <input class="form-control" type="text" name="user" id="user" placeholder="Usuário">
                 </div>
                 <div class="input">
-                    <label  for="passwrd">Senha: <label>
-                    <input class="form-control" type="password" name="passwrd" id="passwrd">
+                    <!-- <label  for="passwrd">Senha: <label> -->
+                    <input class="form-control" type="password" name="passwrd" id="passwrd" placeholder="Senha">
+                </div>
+                <div class="input">
+                    <!-- <label  for="passwrd">Senha: <label> -->
+                    <input class="form-control" type="password" name="confirm_passwrd" id="confirm_passwrd" placeholder="Confirmar Senha">
                 </div>
                 <div class="button-display text-center">
                     <button class="btn btn-primary">Cadastrar</button>

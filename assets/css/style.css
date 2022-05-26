@@ -4,7 +4,7 @@
 body{
     font-family: Roboto;
     background: gray;
-    min-height: vh;
+    min-height: 100vh;
 }
 footer{
     position: fixed;
@@ -13,7 +13,6 @@ footer{
     width: 100%;
     /* Height of the footer*/ 
     height: 40px;
-    background: rgb(61, 61, 240);
 }
 .input input{
     width: 500px;
@@ -52,11 +51,16 @@ footer{
 }
 .Charts{
     padding-top: 20px;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    padding: 50px;
+    box-shadow: 3px 3px 5px 3px lightgray;
 }
 .chart-frame{
     border: 1px solid lightgray;
     border-radius: 15px;
     padding: 10px;
+    box-shadow: 2px 2px 4px 2px lightgray;
 }
 .title-home{
     display: inline-block;
@@ -77,7 +81,7 @@ footer{
     padding: 20px;
     box-shadow: 3px 5px 5px;
 }
-.container{
+.Form-add{
     display: flex;
     justify-content: center;
     align-items: center;

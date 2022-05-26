@@ -23,7 +23,7 @@ if (isset($result[0])){
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['nome'];
     }
-    header("location:../Views/home.php");
+    header("location:../Views/home.php?status=1");
 } else 
 {
     header("location:../index.php?status=4");

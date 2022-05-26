@@ -72,12 +72,10 @@ switch($status){
                     </h4>
                 </div>
                 <div class="input">
-                    <label  for="user">Nome: <label>
-                    <input class="form-control" type="text" name="user" id="user">
+                    <input class="form-control" type="text" name="user" id="user" placeholder="Usuário">
                 </div>
                 <div class="input">
-                    <label  for="passwrd">Senha: <label>
-                    <input class="form-control" type="password" name="passwrd" id="passwrd">
+                    <input class="form-control" type="password" name="passwrd" id="passwrd" placeholder="Senha">
                 </div>
                 <div class="button-display text-center">
                     <button class="btn btn-primary">Entrar</button>

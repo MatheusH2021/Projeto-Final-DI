@@ -1,14 +1,19 @@
 <?php
 require_once('../template/header.php');
+
+if (isset($_GET['status']) == 1){
+    $msg = "Bem Vindo(a) {$_SESSION['user_name']}";
+}
+
 ?>
 
 <div class="wrapper">
-    <?php if(isset($_SESSION['user_id'])){ ?>
+    <?php if(isset($msg)){ ?>
         <div class="alert alert-success text-center" role="alert">
-            Bem-Vindo <?php echo $_SESSION['user_name']; ?><button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
+            <?php echo $msg; ?><button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
         </div>
     <?php } ?>
-    <div class="Charts container-fluid text-center">
+    <div class="Charts container text-center">
         <h3 class="title-home">Resumo de Tarefas:</h3>
         <div class="row">
             <div class="col-lg-6">
@@ -59,3 +64,5 @@ require_once('../template/header.php');
     }
     }); 
 </script>
+
+<?php require_once('../template/footer.php'); ?>

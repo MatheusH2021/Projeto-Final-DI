@@ -3,7 +3,7 @@ require_once('../template/header.php');
 ?>
 
 <div class="wrapper">
-    <div class="container text-center">
+    <div class="Form-add container text-center">
         <div class="card text-center">
             <div class="title-home">
                 <h2>Adicionar Tarefas:</h2>
@@ -34,3 +34,5 @@ require_once('../template/header.php');
         </div>
     </div>
 </div>
+
+<?php require_once('../template/footer.php'); ?>
