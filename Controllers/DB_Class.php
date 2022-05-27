@@ -90,21 +90,13 @@ class MySql extends DB{
 		return $rs;
 	}
 
-    public function updateDB($data, $table, $where, $params=null) {
+    public function updateDB($table, $values, $where, $params=null) {	
+		
+		$sql = "UPDATE $table SET $values WHERE $where";
 
-		$strAlter = "";
-		
-		$conexao=$this->connect();
-		
-		foreach ($data as $column => $value) {
-			$strAlter .= ($strAlter == "") ? "" : ", ";
-			$strAlter .= $column . ' = ' . $value;
-		}	
-		
-		$sql = "UPDATE $table SET $strAlter WHERE $where";
-		
-		$query=$conexao->prepare($sql);
+		$query=$this->connect()->prepare($sql);
 		$query->execute($params);
+		
 		$rows = $query->rowCount();
 
 		if ($rows > 0){

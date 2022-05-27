@@ -23,7 +23,7 @@ if (isset($date)){
 
     header('location:../Views/minhas_tarefas.php?status=sucesso');
 } else {
-    $db->insertDB("titulo, descricao, categoria, status, data_limite, usuario_id", "tarefas", "'{$title}', '{$description}', '{$category}', '{$status}', {$user_id}");
+    $db->insertDB("titulo, descricao, categoria, status, usuario_id", "tarefas", "'{$title}', '{$description}', '{$category}', '{$status}', {$user_id}");
     
     header('location:../Views/minhas_tarefas.php?status=sucesso');
 }

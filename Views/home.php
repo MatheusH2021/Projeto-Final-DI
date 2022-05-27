@@ -8,7 +8,7 @@ if (isset($_GET['status']) == 1){
 }
 
 $result  = $db->selectDB("count(id) as 'qtd_pendentes'", "tarefas", "usuario_id={$_SESSION['user_id']} and status='Pendente';");
-$result2 = $db->selectDB("count(id) as 'qtd_concluidos'", "tarefas", "usuario_id={$_SESSION['user_id']} and status='Concluida';");
+$result2 = $db->selectDB("count(id) as 'qtd_concluidos'", "tarefas", "usuario_id={$_SESSION['user_id']} and status='Concluido';");
 $result3 = $db->selectDB("count(id) as 'qtd_escola'", "tarefas", "usuario_id={$_SESSION['user_id']} and categoria='Escola';");
 $result4 = $db->selectDB("count(id) as 'qtd_trabalho'", "tarefas", "usuario_id={$_SESSION['user_id']} and categoria='Trabalho';");
 $result5 = $db->selectDB("count(id) as 'qtd_independente'", "tarefas", "usuario_id={$_SESSION['user_id']} and categoria='Independente';");
@@ -86,7 +86,7 @@ if (isset($result5[0])){
         data: {
             labels: ["Escola", "Trabalho", "Independente"],
             datasets: [{
-                backgroundColor: ["yellow", "red","blue"],
+                backgroundColor: ["yellow", "cyan","gray"],
                 data: [<?php echo $escola; ?>,<?php echo $trabalho; ?>,<?php echo $independente; ?>]
             }]
     },
