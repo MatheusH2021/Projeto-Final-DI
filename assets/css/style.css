@@ -4,7 +4,7 @@
 body{
     font-family: Roboto;
     background: gray;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 footer{
     position: fixed;
@@ -34,7 +34,8 @@ footer{
     padding-left: 9px;
 }
 .wrapper{
-    margin-top: 20px;
+    margin-top: 100px;
+
 }
 .navbar{
     background: rgb(61, 61, 240);
@@ -79,10 +80,22 @@ footer{
     width: 650px;
     height: auto;
     padding: 20px;
-    box-shadow: 3px 5px 5px;
+    box-shadow: 3px 5px 5px lightgray;
 }
 .Form-add{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.table-frame{
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow:  3px 5px 5px lightgray;
+}
+.table{
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    padding: 25px;
+    /* box-shadow:  3px 5px 5px lightgray; */
 }

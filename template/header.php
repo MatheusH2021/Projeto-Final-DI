@@ -1,5 +1,7 @@
 <?php 
 
+require_once('../Controllers/DB_Class.php');
+
 session_start();
 
 if (!isset($_SESSION['user_id'])){
@@ -16,9 +18,11 @@ if (!isset($_SESSION['user_id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Local-->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
     <script src="../assets/js/scrypt.js"></script>
     <!--Bootstrap-->
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!------------->
     <!--CHARTS-->
@@ -26,32 +30,19 @@ if (!isset($_SESSION['user_id'])){
     <!---------->
     <title>Get it Done! - Organize suas Tarefas</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="Pages container-fluid">
-            <div>
-                <a class="navbar-brand" style="color: white;" href="#">Get it Done!   </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" style="color: white;" aria-current="page" href="../Views/home.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" style="color: white;" aria-current="page" href="../Views/minhas_tarefas.php">Minhas Tarefas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" style="color: white;" href="../Views/add_tarefa.php">Adicionar Tarefa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" style="color: white;" href="../Controllers/logout.php">Sair</a>
-                        </li>
-                    </ul>
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_img"> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a style="text-decoration: none;"href="../Views/home.php" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Get it Done!</span></a>
+                <div class="nav_list"> 
+                    <a style="text-decoration: none;" href="../Views/home.php" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
+                    <a style="text-decoration: none;" href="../Views/minhas_tarefas.php" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Minhas Tarefas</span> </a> 
+                    <a style="text-decoration: none;" href="../Views/add_tarefa.php" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Adicionar Tarefa</span> </a> 
                 </div>
-            </div>
-        </div>
-    </nav>
+            </div> <a style="text-decoration: none;" href="../Controllers/logout.php" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+        </nav>
+    </div>
