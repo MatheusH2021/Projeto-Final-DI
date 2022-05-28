@@ -39,7 +39,7 @@ if (!isset($_SESSION['user_id'])){
         <nav class="nav">
             <div> <a style="text-decoration: none;"href="../Views/home.php" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Get it Done!</span></a>
                 <div class="nav_list"> 
-                    <a style="text-decoration: none;" href="../Views/home.php" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
+                    <a style="text-decoration: none;" href="../Views/home.php" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
                     <a style="text-decoration: none;" href="../Views/minhas_tarefas.php" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Minhas Tarefas</span> </a> 
                     <a style="text-decoration: none;" href="../Views/add_tarefa.php" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Adicionar Tarefa</span> </a> 
                 </div>

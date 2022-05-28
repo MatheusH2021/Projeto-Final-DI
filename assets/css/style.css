@@ -35,7 +35,6 @@ footer{
 }
 .wrapper{
     margin-top: 100px;
-
 }
 .navbar{
     background: rgb(61, 61, 240);
@@ -104,3 +103,51 @@ footer{
 .action{
     margin: 5px;
 }
+
+.detail-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.informations{
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+.informations span{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 2px 0;
+}
+.task{
+    width: 950px;
+    height: auto;
+}
+.description{
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    padding: 10px;
+}
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+/* .top button{
+     width: 100px; */
+
+.display-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.display-buttons button{
+    margin: 2px;
+    display: inline-block;
+    width: 100px;
+}
+
+
