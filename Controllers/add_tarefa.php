@@ -4,10 +4,10 @@ session_start();
 
 $db = new MySql();
 
-if (!empty($_POST['titulo']) && !empty($_POST['descricao']) && !empty($_POST['categoria'])){
-    $title = $_POST['titulo'];
-    $description = $_POST['descricao'];
-    $category = $_POST['categoria'];
+if (!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['categoy'])){
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $category = $_POST['category'];
     $user_id = $_SESSION['user_id'];
     $status = "Pendente";
     
@@ -16,7 +16,7 @@ if (!empty($_POST['titulo']) && !empty($_POST['descricao']) && !empty($_POST['ca
     } 
       
 } else {
-    header("location:../Views/add_tarefa.php?erro=camposvazios");
+    header("location:../Views/add_tarefa.php?status=1");
 }
 if (isset($date)){
     $db->insertDB("titulo, descricao, categoria, status, data_prazo, usuario_id", "tarefas", "'{$title}', '{$description}', '{$category}', '{$status}', '{$date}', {$user_id}");

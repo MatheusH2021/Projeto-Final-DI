@@ -6,9 +6,13 @@ $db = new MySql();
 
 if (isset($_GET['status'])){
     $tarefa_id = $_GET['id'];
-
-    $db->updateDB("tarefas", "status = 'Concluido'", "id={$tarefa_id};");
-    header('location:../Views/minhas_tarefas.php');
+    if ($status == 1){
+        $db->updateDB("tarefas", "status = 'Concluido'", "id={$tarefa_id};");
+        header('location:../Views/minhas_tarefas.php');
+    } else {
+        $db->updateDB("tarefas", "status = 'Concluido'", "id={$tarefa_id};");
+        header('location:../Views/detalhes_tarefa.php');
+    }
 } else {
     $tarefa_id = $_GET['id'];
 

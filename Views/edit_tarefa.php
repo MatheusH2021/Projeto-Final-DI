@@ -5,6 +5,23 @@ if (isset($_GET['status'])){
 } else {
     $status = '';
 }
+if (isset($_GET['id_tarefa'])){
+    $id_tarefa = $_GET['id_tarefa'];
+}
+
+$result = $db->selectDB("id, titulo, descricao, categoria, status, data_prazo, data_cadastro", "tarefas", "id={$id_tarefa}");
+
+if(isset($result[0])){
+    foreach($result as $info){
+        $task_id = $info['id'];
+        $title = $info['titulo'];
+        $description = $info['descricao'];
+        $category = $info['categoria'];
+        $status = $info['status'];
+        $deadline = $info['data_prazo'];
+        $date_created = $info['data_cadastro'];
+    }
+}
 
 switch($status){
     case 1:

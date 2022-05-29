@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body{
+*{
     font-family: Roboto;
+}
+body{
     background: gray;
     min-height: 50vh;
 }
 footer{
-    position: fixed;
+    position:fixed;
     padding: 10px 10px 0px 10px;
     bottom: 0;
     width: 100%;
@@ -26,7 +27,7 @@ footer{
     padding-left: 15px;
 }
 .input .ajust-data{
-    margin-left: 20px;
+    margin-left: 11.5px;
     padding-left: 15px;
 }
 .input .ajust-categoria{
@@ -63,7 +64,7 @@ footer{
     box-shadow: 2px 2px 4px 2px lightgray;
 }
 .title-home{
-    display: inline-block;
+    display: block;
     font-family: Roboto;
     margin-bottom: 25px;
     border-bottom: 3px solid rgb(61, 61, 240);
@@ -109,13 +110,13 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.informations{
+.info{
     border: 1px solid lightgray;
     padding: 5px;
     border-radius: 10px;
     margin: 15px 0;
 }
-.informations span{
+.info span{
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 2px;
@@ -128,7 +129,9 @@ footer{
 .description{
     border: 1px solid lightgray;
     border-radius: 15px;
+    padding-top: 10px;
     padding: 10px;
+    min-height: 320px;
 }
 .top{
     display: flex;
@@ -144,7 +147,7 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.display-buttons button{
+.display-buttons a{
     margin: 2px;
     display: inline-block;
     width: 100px;

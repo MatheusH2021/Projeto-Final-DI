@@ -28,9 +28,9 @@ if (isset($result[0])){
         }
         $table .= "<td>{$info['data_cadastro']}</td>";
         $table .= "<td><a type='button' class='action btn btn-success btn-sm' href='../Controllers/atualizar.php?id={$info['id']}&status=1'><i class='bx bx-check'></i></a>";
-        $table .= "<a type='button' class='action btn btn-danger btn-sm' href='../Controllers/deletar.php?id={$info['id']}'><i class='bx bx-trash'></i></a>";
-        $table .= "<a type='button' class='action btn btn-primary btn-sm' href=''><i class='bx bx-pencil'></i></a>";
-        $table .= "<a type='button' class='action btn btn-info btn-sm' href='../Views/detalhes_tarefa.php'><i class='bx bx-detail'></i></a></td>";
+        $table .= "<a type='button' class='action btn btn-info btn-sm' href='../Views/detalhes_tarefa.php?id_tarefa={$info['id']}'><i class='bx bx-detail'></i></a>";
+        $table .= "<a type='button' class='action btn btn-danger btn-sm' href='../Controllers/deletar.php?id={$info['id']}'><i class='bx bx-trash'></i></a></td>";
+        // $table .= "<a type='button' class='action btn btn-primary btn-sm' href=''><i class='bx bx-pencil'></i></a>";
         $table .= "</tr>";
     }
 } else {
