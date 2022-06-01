@@ -4,7 +4,7 @@ session_start();
 
 $db = new MySql();
 
-if (!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['categoy'])){
+if (!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['category'])){
     $title = $_POST['title'];
     $description = $_POST['description'];
     $category = $_POST['category'];
@@ -21,9 +21,9 @@ if (!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['c
 if (isset($date)){
     $db->insertDB("titulo, descricao, categoria, status, data_prazo, usuario_id", "tarefas", "'{$title}', '{$description}', '{$category}', '{$status}', '{$date}', {$user_id}");
 
-    header('location:../Views/minhas_tarefas.php?status=sucesso');
+    header('location:../Views/minhas_tarefas.php?status=1');
 } else {
     $db->insertDB("titulo, descricao, categoria, status, usuario_id", "tarefas", "'{$title}', '{$description}', '{$category}', '{$status}', {$user_id}");
     
-    header('location:../Views/minhas_tarefas.php?status=sucesso');
+    header('location:../Views/minhas_tarefas.php?status=1');
 }

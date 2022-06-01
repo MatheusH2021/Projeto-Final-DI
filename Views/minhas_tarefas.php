@@ -3,8 +3,33 @@ require_once('../template/header.php');
 
 $db = new Mysql();
 
+if (isset($_GET['status'])){
+    $status = $_GET['status'];
+} else {
+    $status = '';
+}
+
+switch($status){
+    case 1:
+        $msg = "Tarefa Adicionada com sucesso!";
+        break;
+    case 2:
+        $msg = "Tarefa Concluida com sucesso!";
+        break;
+    case 3:
+        $msg = "Tarefa Deletada com sucesso!";
+        break;
+    case 4:
+        $msg = "Por favor selecione a tarefa que deseja excluir!";   
+        break;
+    case 5:
+        $msg = "A tarefa já está concluida!";
+        break;
+}
+
 $result = $db->selectDB("id, titulo, categoria, status, data_prazo, data_cadastro", "tarefas", "usuario_id={$_SESSION['user_id']};");
 $table = '';
+
 if (isset($result[0])){
     foreach($result as $info){
         $table .= "<tr>";
@@ -21,13 +46,13 @@ if (isset($result[0])){
         } else {
             $table .= "<td style='color: green;'>{$info['status']}</td>";
         }
-        if ($info['data_prazo'] == ''){
+        if ($info['data_prazo'] == '0000-00-00' || empty($info['data_prazo'])){
             $table .= "<td>Sem prazo</td>";
         } else {
             $table .= "<td>{$info['data_prazo']}</td>";
         }
         $table .= "<td>{$info['data_cadastro']}</td>";
-        $table .= "<td><a type='button' class='action btn btn-success btn-sm' href='../Controllers/atualizar.php?id={$info['id']}&status=1'><i class='bx bx-check'></i></a>";
+        $table .= "<td><a type='button' class='action btn btn-success btn-sm' href='../Controllers/atualizar.php?id_tarefa={$info['id']}&status=1'><i class='bx bx-check'></i></a>";
         $table .= "<a type='button' class='action btn btn-info btn-sm' href='../Views/detalhes_tarefa.php?id_tarefa={$info['id']}'><i class='bx bx-detail'></i></a>";
         $table .= "<a type='button' class='action btn btn-danger btn-sm' href='../Controllers/deletar.php?id={$info['id']}'><i class='bx bx-trash'></i></a></td>";
         // $table .= "<a type='button' class='action btn btn-primary btn-sm' href=''><i class='bx bx-pencil'></i></a>";
@@ -40,6 +65,16 @@ if (isset($result[0])){
 <!-- <a type="button" class="btn btn-success" href=""><i class="bx bx-check"></i></a> -->
 <div class="wrapper">
     <div class="table-frame text-center">
+    <?php if(isset($msg)){ ?>
+        <?php if ($status <= 3 ){ ?>
+        <div class="alert alert-success text-center" role="alert">
+            <?php echo $msg; ?><button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
+        </div>
+    <?php } else { ?>
+        <div class="alert alert-danger text-center" role="alert">
+            <?php echo $msg; ?><button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
+        </div>
+    <?php } } ?>
         <div class="title-home">
             <h2>Minhas Tarefas:</h2>
         </div>
