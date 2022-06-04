@@ -44,5 +44,7 @@ if (isset($_GET['status'])){
             $db->updateDB("tarefas", "titulo='{$title}', descricao='{$description}', categoria='{$category}'", "id={$tarefa_id};");
             header("location:../Views/detalhes_tarefa.php?id_tarefa={$tarefa_id}&status=2");
         }
+    } else {
+        header("location:../Views/detalhes_tarefa.php?id_tarefa={$tarefa_id}&status=4");
     }
 }
