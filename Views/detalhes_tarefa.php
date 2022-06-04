@@ -20,7 +20,7 @@ switch($status_pop){
         $msg = "Esta tarefa já está concluída!";
         break;
     case 4:
-        $msg = "Por favor, preencha os campos para poder editar sua tarefa! OBS: Prazo não é obrigatório.";
+        $msg = "Por favor, preencha os campos para poder editar sua tarefa! OBS: Prazo não é obrigatório!!";
         break;
 }
 
