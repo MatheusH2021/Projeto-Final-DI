@@ -5,8 +5,8 @@ Projeto realizado para avaliação final de DI(Design de Interfaces).
 O projeto tem como intuito principal ser um gerenciador de tarefas, onde pode adicionar, editar, excluir e marcar tarefas como concluidas. O projeto foi desenvolvida com base em PHP, HTML, CSS e BootStrap. Utilizando o banco de dados MySql. O projeto também segue alguns princípios de MVC, onde se divide a aplicação em Model Views e Controllers. 
 
 ## Layout e padrões:
-O projeto segue um estilo de Dashboard, apresentando gráficos na página inicial e funções principais em outras paginas.
-O padrão de cores segue tendo como principal o azul, onde vai variando de tonalidade dependendo dos componente. A cor secundária segue com Branco, onde é utilizado principalmente no background da plataforma e no fundo das tabelas e gráficos. A fonte escolhida foi Roboto, onde está presente em todo o projeto.
+O projeto possui um estilo de Dashboard, apresentando gráficos na página inicial e funções principais em outras paginas.
+O padrão de cores tem como principal o azul, onde vai variando de tonalidade dependendo dos componente. A cor secundáriae é o Branco, onde é utilizado principalmente no background da plataforma e no fundo das tabelas e gráficos. A fonte escolhida foi Roboto, onde está presente em todo o projeto.
 ### Pagina de Login:
    ![Sem título](https://user-images.githubusercontent.com/89544590/172020956-7b5c7c0f-e680-4ccd-9ce1-49f3f6e34b31.jpg)   
 ### Pagina de Cadastro:
@@ -21,7 +21,7 @@ O padrão de cores segue tendo como principal o azul, onde vai variando de tonal
    ![Adicinar tatefa](https://user-images.githubusercontent.com/89544590/172020237-54c892ac-c090-4ca7-bdf7-41d0110bc6e7.jpg) ![Atualizar tarefa](https://user-images.githubusercontent.com/89544590/172020240-ce9fd203-c0d5-438d-84f0-7b066f12fb4a.jpg)
 
 ## Base de dados e Tabelas:
-O projeto segue um padrão de tabelas de usuarios e tarefas. Segue abaixo a codificação para melhor execução! O nome escolhido para a base de dados foi: getitdone, tudo minúsculo e sem espaço.
+O projeto possui duas tabelas de usuarios e tarefas, que são interligadas por meio de chave estrangeira. Segue abaixo a codificação para melhor execução! O nome escolhido para a base de dados foi: getitdone, tudo minúsculo e sem espaço.
 
 ### . Criando tabela de Usuarios:                                                                                                  
     CREATE TABLE usuarios (                                                   
