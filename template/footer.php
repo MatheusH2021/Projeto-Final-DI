@@ -1,6 +1,6 @@
  
     
-    <footer class="text-center">Copyright - Matheus @2022 - </footer>
+    <footer class="text-center">Copyright - Matheus</footer>
     </div>
 </body>
 </html>

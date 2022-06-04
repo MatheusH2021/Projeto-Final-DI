@@ -26,6 +26,7 @@ if(isset($result[0])){
 <div class="wrapper">   
     <div class="Form-add container text-center">
         <div class="card text-center">
+            <a class="arrow btn btn-primary" type="button" href="detalhes_tarefa.php?id_tarefa=<?php echo $id_tarefa; ?>" title="Voltar"><i class="bx bx-left-arrow-alt"></i></a>
             <div class="title-home">
                 <h2>Atualizar Tarefas:</h2>
             </div>
@@ -40,10 +41,10 @@ if(isset($result[0])){
                 </div>
                 <div class="input">
                     <label for="category">Categoria:</label>
-                    <select class="ajust-categoria form-control" name="category" id="category" value="<?php echo $category; ?>">
-                        <option class="form-control" value="Escola">Escola</option>
-                        <option class="form-control" value="Trabalho">Trabalho</option>
-                        <option class="form-control" value="Independente">Independente</option>
+                    <select class="ajust-categoria form-control" name="category" id="category">
+                        <option class="form-control"<?php if ($category == 'Escola'){?> selected <?php } ?>value="Escola">Escola</option>
+                        <option class="form-control"<?php if ($category == 'Trabalho'){?> selected <?php } ?>value="Trabalho">Trabalho</option>
+                        <option class="form-control"<?php if ($category == 'Independente'){?> selected <?php } ?>value="Independente">Independente</option>
                     </select>                    
                 </div>
                 <div class="input">

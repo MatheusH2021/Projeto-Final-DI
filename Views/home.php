@@ -94,6 +94,13 @@ if (isset($result5[0])){
         title: {
             display: true,
             text: "Quantidade de tarefas por categoria:",
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                 beginAtZero: true
+                }
+            }]
         }
     }
     }); 

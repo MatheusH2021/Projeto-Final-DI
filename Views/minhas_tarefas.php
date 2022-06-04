@@ -52,14 +52,13 @@ if (isset($result[0])){
             $table .= "<td>{$info['data_prazo']}</td>";
         }
         $table .= "<td>{$info['data_cadastro']}</td>";
-        $table .= "<td><a type='button' class='action btn btn-success btn-sm' href='../Controllers/atualizar.php?id_tarefa={$info['id']}&status=1'><i class='bx bx-check'></i></a>";
-        $table .= "<a type='button' class='action btn btn-info btn-sm' href='../Views/detalhes_tarefa.php?id_tarefa={$info['id']}'><i class='bx bx-detail'></i></a>";
-        $table .= "<a type='button' class='action btn btn-danger btn-sm' href='../Controllers/deletar.php?id={$info['id']}'><i class='bx bx-trash'></i></a></td>";
-        // $table .= "<a type='button' class='action btn btn-primary btn-sm' href=''><i class='bx bx-pencil'></i></a>";
+        $table .= "<td><a type='button' class='action btn btn-info btn-sm' href='../Views/detalhes_tarefa.php?id_tarefa={$info['id']}' title='Detalhes  da Tarefa'><i class='bx bx-detail'></i></a>";
+        $table .= "<a type='button' class='action btn btn-success btn-sm' href='../Controllers/atualizar.php?id_tarefa={$info['id']}&status=1' title='Concluir Tarefa'><i class='bx bx-check'></i></a>";
+        $table .= '<a type="button" class="action btn btn-danger btn-sm" href="../Controllers/deletar.php?id='.$info["id"].'" title="Excluir Tarefa" onclick="return confirm("Tem certeza que deseja deletar este registro?")"><i class="bx bx-trash" ></i></a></td>';
         $table .= "</tr>";
     }
 } else {
-    $table = "<tr><td colspan=6>Nenhuma Tarefa cadastrada</td></tr>";
+    $table = "<tr><td colspan=6>Nenhuma Tarefa cadastrada! <a href='add_tarefa.php'>Cadastre sua tarefa aqui</a></td></tr>";
 }
 ?>
 <!-- <a type="button" class="btn btn-success" href=""><i class="bx bx-check"></i></a> -->

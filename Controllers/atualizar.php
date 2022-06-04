@@ -39,10 +39,10 @@ if (isset($_GET['status'])){
         }
         if ($date != ''){
             $db->updateDB("tarefas", "titulo='{$title}', descricao='{$description}', categoria='{$category}', data_prazo='{$date}'", "id={$tarefa_id};");
-            header("location:../Views/detalhes_tarefa.php?status=2&id_tarefa={$tarefa_id}");
+            header("location:../Views/detalhes_tarefa.php?id_tarefa={$tarefa_id}&status=2");
         } else {
             $db->updateDB("tarefas", "titulo='{$title}', descricao='{$description}', categoria='{$category}'", "id={$tarefa_id};");
-            header("location:../Views/detalhes_tarefa.php?status=2&id_tarefa={$tarefa_id}");
+            header("location:../Views/detalhes_tarefa.php?id_tarefa={$tarefa_id}&status=2");
         }
     }
 }

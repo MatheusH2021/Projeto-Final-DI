@@ -16,7 +16,7 @@ switch($status){
         $msg = "As senhas não coincidem, Por favor confirme sua senha!(OBS: Sua senha deve possuir mais que 6 caracteres)";
         break;
     case 4:
-        $msg = "Usuario deve possuir mais que 3 e menos que 10 caracteres, por favor digite um usuário maior";
+        $msg = "Usuario deve possuir mais que 3 e menos que 10 caracteres, por favor digite um usuário Válido";
         break;
 }
 ?>
@@ -33,6 +33,7 @@ switch($status){
     <!--Bootstrap-->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!------------->
     <title>Get it Done! - Organizador de Tarefas</title>
 </head>
@@ -56,16 +57,22 @@ switch($status){
                     </h4>
                 </div>
                 <div class="input">
-                    <!-- <label  for="user">Nome: <label> -->
-                    <input class="form-control" type="text" name="user" id="user" placeholder="Usuário">
+                    <div class="input-group">
+                        <span class="input-group-text btn btn-primary" id="basic-addon1"><i class="bx bx-user"></i></span>
+                        <input class="form-control" type="text" name="user" id="user" placeholder="Usuário">
+                    </div>
                 </div>
                 <div class="input">
-                    <!-- <label  for="passwrd">Senha: <label> -->
-                    <input class="form-control" type="password" name="passwrd" id="passwrd" placeholder="Senha">
+                    <div class="input-group">
+                        <span class="input-group-text btn btn-primary" id="basic-addon1"><i class="bx bx-lock-open"></i></span>
+                        <input class="form-control" type="password" name="passwrd" id="passwrd" placeholder="Senha">
+                    </div>
                 </div>
                 <div class="input">
-                    <!-- <label  for="passwrd">Senha: <label> -->
-                    <input class="form-control" type="password" name="confirm_passwrd" id="confirm_passwrd" placeholder="Confirmar Senha">
+                    <div class="input-group">
+                        <span class="input-group-text btn btn-primary" id="basic-addon1"><i class="bx bx-lock"></i></span>
+                        <input class="form-control" type="password" name="confirm_passwrd" id="confirm_passwrd" placeholder="Confirmar Senha">
+                    </div>
                 </div>
                 <div class="button-display text-center">
                     <button class="btn btn-primary">Cadastrar</button>

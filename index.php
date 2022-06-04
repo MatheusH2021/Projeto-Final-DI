@@ -42,6 +42,7 @@ switch($status){
     <script src="assets/js/scrypt.js"></script>
     <!--Bootstrap-->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <!------------->
     <title>Get it Done! - Organizador de Tarefas</title>
@@ -72,10 +73,16 @@ switch($status){
                     </h4>
                 </div>
                 <div class="input">
-                    <input class="form-control" type="text" name="user" id="user" placeholder="Usuário">
+                    <div class="input-group">
+                        <span class="input-group-text btn btn-primary" id="basic-addon1"><i class="bx bx-user"></i></span>
+                        <input class="form-control" type="text" name="user" id="user" placeholder="Usuário">
+                    </div>
                 </div>
                 <div class="input">
-                    <input class="form-control" type="password" name="passwrd" id="passwrd" placeholder="Senha">
+                    <div class="input-group">
+                        <span class="input-group-text btn btn-primary" id="basic-addon1"><i class="bx bx-lock"></i></span> 
+                        <input class="form-control" type="password" name="passwrd" id="passwrd" placeholder="Senha">
+                    </div>
                 </div>
                 <div class="button-display text-center">
                     <button class="btn btn-primary">Entrar</button>

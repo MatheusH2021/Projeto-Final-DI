@@ -5,7 +5,7 @@ body{
     font-family: Roboto;
 }
 .wrapper{
-    background: rgb(228, 222, 222);
+    background: #2f41e7;
     display: flex;
     justify-content: center;
     align-items: center;
