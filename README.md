@@ -21,7 +21,7 @@ O padrão de cores tem como principal o azul, onde vai variando de tonalidade de
    ![Adicinar tatefa](https://user-images.githubusercontent.com/89544590/172020237-54c892ac-c090-4ca7-bdf7-41d0110bc6e7.jpg) ![Atualizar tarefa](https://user-images.githubusercontent.com/89544590/172020240-ce9fd203-c0d5-438d-84f0-7b066f12fb4a.jpg)
 
 ## Base de dados e Tabelas:
-O projeto possui duas tabelas de usuarios e tarefas, que são interligadas por meio de chave estrangeira. Segue abaixo a codificação para melhor execução! O nome escolhido para a base de dados foi: getitdone, tudo minúsculo e sem espaço.
+O projeto possui duas tabelas, usuarios e tarefas, que são interligadas por meio de chave estrangeira. Segue abaixo a codificação para melhor execução! O nome escolhido para a base de dados foi: getitdone, tudo minúsculo e sem espaço.
 
 ### . Criando tabela de Usuarios:                                                                                                  
     CREATE TABLE usuarios (                                                   
