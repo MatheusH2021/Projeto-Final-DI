@@ -2,11 +2,11 @@
 Projeto realizado para avaliação final de DI(Design de Interfaces).
 
 ## Get it Done!
-O projeto tem como intuito principal ser um gerenciador de tarefas, onde você pode adicionar, editar, excluir e marcar tarefas como concluidadas. A plataforma foi desenvolvida com base em PHP, HTML, CSS e BootStrap. Utilizando o banco de dados MySql. O projeto também segue alguns princípios de MVC, onde se divide a aplicação em Model Views e Controllers. 
+O projeto tem como intuito principal ser um gerenciador de tarefas, onde pode adicionar, editar, excluir e marcar tarefas como concluidas. O projeto foi desenvolvida com base em PHP, HTML, CSS e BootStrap. Utilizando o banco de dados MySql. O projeto também segue alguns princípios de MVC, onde se divide a aplicação em Model Views e Controllers. 
 
 ## Layout e padrões:
-A paltaforma segue um estilo de Dashboard, apresentando gráficos na página inicial e funções principais em outras paginas.
-O padrão de cores segue tendo como principal o azul, onde vai variando de tonalidade dependendo dos componente. A cor secundária segue com um Branco, onde é utilizado principalmente no background da plataforma e no fundo das tabelas e gráficos. A fonte escolhida foi Roboto, onde está presente em todo o projeto.
+O projeto segue um estilo de Dashboard, apresentando gráficos na página inicial e funções principais em outras paginas.
+O padrão de cores segue tendo como principal o azul, onde vai variando de tonalidade dependendo dos componente. A cor secundária segue com Branco, onde é utilizado principalmente no background da plataforma e no fundo das tabelas e gráficos. A fonte escolhida foi Roboto, onde está presente em todo o projeto.
 ### Pagina de Login:
    ![Sem título](https://user-images.githubusercontent.com/89544590/172020956-7b5c7c0f-e680-4ccd-9ce1-49f3f6e34b31.jpg)   
 ### Pagina de Cadastro:
