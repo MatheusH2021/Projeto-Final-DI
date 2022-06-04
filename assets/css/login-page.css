@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /*-Login Page-*/
-body{
-    font-family: Roboto;
-}
 .wrapper{
+    font-family: Roboto;
     background: #2f41e7;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;   
 }
-.title{
+.title {
    font-family:'Pacifico', cursive;
    color: rgb(43, 43, 207);
    margin-bottom: 10px;

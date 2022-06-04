@@ -43,6 +43,6 @@ if (!isset($_SESSION['user_id'])){
                     <a style="text-decoration: none;" href="../Views/minhas_tarefas.php" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Minhas Tarefas</span> </a> 
                     <a style="text-decoration: none;" href="../Views/add_tarefa.php" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Adicionar Tarefa</span> </a> 
                 </div>
-            </div> <a style="text-decoration: none;" href="../Controllers/logout.php" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+            </div> <a style="text-decoration: none;" href="../Controllers/logout.php" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Sair</span> </a>
         </nav>
     </div>
