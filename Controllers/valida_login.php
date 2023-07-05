@@ -28,14 +28,3 @@ if (isset($result[0])){
 {
     header("location:../index.php?status=4");
 }
-
-
-
-
-// if ($user == 'Matheus' && $password == "M@TT2021"){
-//     header("location:../Views/home.php");
-// } else {
-    
-// }
-
-
