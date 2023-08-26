@@ -27,7 +27,7 @@ O projeto possui duas tabelas, usuarios e tarefas, que são interligadas por mei
     CREATE TABLE usuarios (                                                   
       id INT NOT NULL AUTO_INCREMENT , 
       nome VARCHAR(35) NOT NULL , 
-      senha VARCHAR(12) NOT NULL , 
+      senha VARCHAR(100) NOT NULL , 
       data_criada DATE NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)
     );
 ### . Criando tabela de Tarefas:
@@ -35,6 +35,7 @@ O projeto possui duas tabelas, usuarios e tarefas, que são interligadas por mei
       id int NOT NULL PRIMARY KEY,
       titulo VARCHAR(255) NOT NULL , 
       descricao VARCHAR(255) NOT NULL , 
+      categoria VARCHAR(100) NOT NULL ,
       status VARCHAR(25) NOT NULL , 
       data_prazo DATE NULL , 
       data_cadastro DATE NOT NULL DEFAULT CURRENT_TIMESTAMP, 
